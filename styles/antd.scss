@@ -1,0 +1,31 @@
+.antd-button {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 0;
+  background: var(--blue-color);
+  font-family: 'Inter Tight', sans-serif;
+
+  &:hover {
+    background: var(--dark-blue-color) !important;
+  }
+}
+
+.antd-checkbox {
+
+  .ant-checkbox-inner {
+    background: #FFFFFF !important;
+    border-radius: 0;
+    border: none;
+    width: 20px;
+    height: 20px;
+
+    &:after {
+      border-color: var(--blue-color);
+      inset-inline-start: 26.5%;
+      height: 10px;
+      width: 7px;
+    }
+  }
+}
