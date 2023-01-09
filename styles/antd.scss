@@ -13,7 +13,6 @@
 }
 
 .antd-checkbox {
-
   .ant-checkbox-inner {
     background: #FFFFFF !important;
     border-radius: 0;
@@ -26,6 +25,37 @@
       inset-inline-start: 26.5%;
       height: 10px;
       width: 7px;
+    }
+  }
+}
+
+.antd-collapse {
+  .ant-collapse-item {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    .ant-collapse-header {
+      align-items: center;
+      padding: 0;
+
+      .ant-collapse-expand-icon {
+        padding-right: 15px;
+      }
+
+      .ant-collapse-header-text {
+        font-family: 'Inter Tight', sans-serif;
+        color: var(--blue-color);
+        line-height: 19px;
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+
+    .ant-collapse-content {
+      .ant-collapse-content-box {
+        padding: 15px 0 0;
+      }
     }
   }
 }

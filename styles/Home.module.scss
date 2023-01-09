@@ -1,6 +1,64 @@
 .root {
 }
 
+.question-answer {
+  background: var(--grey-color);
+
+  .wrapper {
+    position: relative;
+    padding: 60px 0 52px;
+
+    &:before {
+      content: '?';
+      right: 0;
+      bottom: -100px;
+      position: absolute;
+      font-weight: 700;
+      font-size: 328px;
+      line-height: 397px;
+      color: var(--blue-color);
+      opacity: 0.5;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--blue-color);
+    }
+
+    .grid {
+      display: grid;
+      grid-gap: 40px;
+      margin-top: 37px;
+      grid-template-columns: 6fr 4fr 2fr;
+
+      .icon {
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+        border-radius: 50%;
+        color: var(--blue-color);
+
+        &-minus {
+          outline: 1px solid rgba(17, 70, 143, .1);
+        }
+
+        &-plus {
+          background: rgba(17, 70, 143, .1);
+        }
+      }
+
+      .text {
+        font-size: 14px;
+        font-weight: 400;
+        padding-left: 45px;
+        color: var(--black-color);
+        font-family: 'Inter Tight', sans-serif;
+      }
+    }
+  }
+}
+
 .call-back {
   background: var(--blue-color);
   overflow: hidden;
@@ -20,7 +78,7 @@
     background-size: cover;
   }
 
-  .call-back__wrapper {
+  .wrapper {
     z-index: 2;
     display: grid;
     grid-gap: 60px;
@@ -116,6 +174,7 @@
 
             a {
               color: #2780FB;
+              text-decoration: none;
 
               &:hover {
                 text-decoration: underline;
@@ -134,7 +193,7 @@
 
 @media (max-width: 1200px) {
   .call-back {
-    .call-back__wrapper {
+    .wrapper {
       .left-side {
         padding: 15px 0 0 30px;
 
@@ -157,8 +216,14 @@
 }
 
 @media (max-width: 992px) {
+  .question-answer {
+    .wrapper {
+      padding: 30px 0 52px;
+    }
+  }
+
   .call-back {
-    .call-back__wrapper {
+    .wrapper {
       grid-gap: 30px;
       padding: 60px 0 125px;
       grid-template-columns: 1fr 1fr;
@@ -181,7 +246,7 @@
 
 @media (max-width: 865px) {
   .call-back {
-    .call-back__wrapper {
+    .wrapper {
       .left-side {
         padding: 30px 0 0 30px;
 
@@ -211,8 +276,22 @@
 }
 
 @media (max-width: 768px) {
+  .question-answer {
+    .wrapper {
+      padding: 37px 0 33px;
+
+      &:before {
+        display: none;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
   .call-back {
-    .call-back__wrapper {
+    .wrapper {
       padding: 40px 0;
       grid-gap: 105px;
       grid-template-columns: 1fr;
@@ -256,7 +335,7 @@
 
 @media (max-width: 375px) {
   .call-back {
-    .call-back__wrapper {
+    .wrapper {
       .right-side {
         .form {
           max-width: 265px;
