@@ -6,7 +6,8 @@ import Footer from "../components/Footer"
 import { Button, Checkbox, Collapse } from 'antd'
 import PhoneInput from 'react-phone-input-2'
 import CarCard from "@components/CarCard";
-import { cars } from "../data";
+import { cars, info } from "../data";
+import CardModel from "@components/CardModel";
 
 const { Panel } = Collapse
 
@@ -22,6 +23,86 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.root}>
+        <section className={styles['info']}>
+          <div className="container">
+            <div className={styles['wrapper']}>
+              {info.map(i => (
+                <div key={i.icon} className={styles.item}>
+                  <i className={`icon-${i.icon} ${styles.icon}`} />
+                  <span className={styles.title}>{i.title}</span>
+                  <p className={styles.text}>{i.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section className={styles['popular-models']}>
+          <div className="container">
+            <div className={styles['wrapper']}>
+              <span className={styles.title}>Популярные марки и модели</span>
+              <p className={styles.text}>Корейский рынок предлагает для вас новинки из
+                <span className="red-color"> модельного ряда 2023 года</span> в топовой комплектации</p>
+              <div className={styles['wrap-cards']}>
+                <CardModel
+                  model="KIA KARNIVAL"
+                  year={2023}
+                  image="/cars/kia_karnival.jpg"
+                  price={{
+                    ko: 52500,
+                    ru: 61000
+                  }}
+                />
+                <CardModel
+                  model="Hyundai Staria"
+                  year={2023}
+                  image="/cars/hyundai_staria.jpg"
+                  price={{
+                    ko: 52500,
+                    ru: 72350
+                  }}
+                />
+                <CardModel
+                  model="Hyundai palisade"
+                  year={2023}
+                  image="/cars/hyundai_palisade.jpg"
+                  price={{
+                    ko: 60910,
+                    ru: 68500
+                  }}
+                />
+                <CardModel
+                  model="Genesis GV70"
+                  year={2022}
+                  image="/cars/genesis_gv70.jpg"
+                  price={{
+                    ko: 40850,
+                    ru: 80800
+                  }}
+                />
+              </div>
+              <Button className={`antd-button ${styles['button']}`} type="primary">
+                Рассчитать стоимость
+              </Button>
+            </div>
+          </div>
+        </section>
+        <section className={styles['why-korea']}>
+          <div className="container">
+            <div className={styles['wrapper']}>
+              <span className={styles.title}>Почему авто из Кореи?</span>
+              <div className={styles['right-side']}>
+                <div className={styles['right-side__item']}>
+                  <span>Широкий выбор комплектаций</span>
+                  <p>Эксклюзивные функции и оснащение в том числе заводское ГБО</p>
+                </div>
+                <div className={styles['right-side__item']}>
+                  <span>Уникальные авто</span>
+                  <p>Авто выпущенные только для рынка Южной Кореи</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className={styles['new-cars']}>
           <div className="container">
             <div className={styles['wrapper']}>
