@@ -1,0 +1,114 @@
+.root {
+  max-width: 260px;
+
+  .head {
+    height: 180px;
+    overflow: hidden;
+    margin-bottom: 5px;
+
+    .img-wrap {
+      position: relative;
+      overflow: hidden;
+      height: 180px;
+
+      img {
+        top: 50%;
+        left: 50%;
+        width: 260px;
+        height: auto;
+        object-fit: cover;
+        position: absolute;
+        transform: translate(-50%,-50%);
+      }
+    }
+  }
+
+  .body {
+    background: #FFFFFF;
+
+    .title {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 16px 20px;
+      color: var(--blue-color);
+      text-transform: uppercase;
+    }
+
+    .price {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background: var(--blue-color);
+
+      .price__item {
+        &:not(:first-child) {
+          .price-tag {
+            opacity: .8;
+          }
+        }
+
+        .price-tag {
+          font-weight: 600;
+          font-size: 20px;
+          color: #FFFFFF;
+        }
+
+        .price-desc {
+          display: flex;
+          align-items: center;
+
+          span {
+            font-size: 12px;
+            color: #FFFFFF;
+            opacity: 0.8;
+          }
+
+          img {
+            margin-left: 4px;
+          }
+        }
+      }
+
+      .price__divider {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+        opacity: 0.5;
+      }
+    }
+
+    .characteristic {
+      display: grid;
+      grid-gap: 7px;
+      padding: 24px 20px;
+
+      .characteristic__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .name {
+          white-space: nowrap;
+          font-size: 14px;
+          opacity: .5;
+        }
+
+        .divider {
+          width: 100%;
+          height: 1px;
+          opacity: .1;
+          margin: 0 5px;
+          background: var(--black-color);
+        }
+
+        .value {
+          white-space: nowrap;
+          font-weight: 500;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

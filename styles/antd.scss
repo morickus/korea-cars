@@ -59,3 +59,51 @@
     }
   }
 }
+
+.antd-carousel {
+  .slick-arrow {
+    z-index: 1;
+
+    &:before {
+      display: none;
+    }
+
+    i {
+      transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    &:hover i {
+      color: #FFFFFF;
+      opacity: .5;
+    }
+  }
+
+  .slick-prev {
+    inset-inline-start: 15px;
+    font-size: 24px;
+    color: #FFFFFF;
+    transform: rotate(-180deg);
+  }
+
+  .slick-next {
+    inset-inline-end: 15px;
+    font-size: 24px;
+    color: #FFFFFF;
+  }
+
+  .slick-dots {
+    &.slick-dots-bottom {
+      bottom: 24px;
+    }
+
+    li {
+      width: 6px !important;
+
+      button {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

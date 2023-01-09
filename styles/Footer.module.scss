@@ -1,5 +1,4 @@
 .root {
-  height: 322px;
   overflow: hidden;
   position: relative;
 
@@ -109,7 +108,6 @@
 
 @media (max-width: 992px) {
   .root {
-
     .wrapper {
       gap: 30px;
     }
@@ -139,8 +137,6 @@
 
 @media (max-width: 768px) {
   .root {
-    height: auto;
-
     .wrapper {
       gap: 0;
       flex-direction: column;

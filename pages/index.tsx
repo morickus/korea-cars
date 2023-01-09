@@ -5,6 +5,8 @@ import styles from '../styles/Home.module.scss'
 import Footer from "../components/Footer"
 import { Button, Checkbox, Collapse } from 'antd'
 import PhoneInput from 'react-phone-input-2'
+import CarCard from "@components/CarCard";
+import { cars } from "../data";
 
 const { Panel } = Collapse
 
@@ -20,6 +22,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.root}>
+        <section className={styles['new-cars']}>
+          <div className="container">
+            <div className={styles['wrapper']}>
+              <h4 className={styles.title}>Новые автомобили без пробега</h4>
+              <p className={styles.text}>В наличии у <span className="red-color">KoreaCars</span><br/>
+                Цены из Кореи <span className="red-color">под ключ</span></p>
+              <div className={styles['wrap-cards']}>
+                {cars.map(i => <CarCard key={i.model} {...i} />)}
+              </div>
+            </div>
+          </div>
+        </section>
         <section className={styles['question-answer']}>
           <div className="container">
             <div className={styles['wrapper']}>
