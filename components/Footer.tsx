@@ -1,6 +1,7 @@
 import styles from '@styles/Footer.module.scss'
 import Image from 'next/image'
 import { YMaps, Map } from '@pbe/react-yandex-maps'
+import { Link } from 'react-scroll'
 
 const Footer = () => {
   const defaultState = {
@@ -23,11 +24,41 @@ const Footer = () => {
             <div className={styles['group']}>
               <span className={styles['group__title']}>Навигация</span>
               <div className={styles['group__list']}>
-                <a href="#">Полный пакет услуг</a>
-                <a href="#">Популярные марки и модели</a>
-                <a href="#">Новые автомобили без пробега</a>
-                <a href="#">Почему авто из Кореи?</a>
-                <a href="#">Часто задаваемые вопросы</a>
+                <Link
+                  to="package-services"
+                  smooth={true}
+                  duration={500}
+                >
+                  Полный пакет услуг
+                </Link>
+                <Link
+                  to="popular-models"
+                  smooth={true}
+                  duration={500}
+                >
+                  Популярные марки и модели
+                </Link>
+                <Link
+                  to="new-cars"
+                  smooth={true}
+                  duration={500}
+                >
+                  Новые автомобили без пробега
+                </Link>
+                <Link
+                  to="why-korea"
+                  smooth={true}
+                  duration={500}
+                >
+                  Почему авто из Кореи?
+                </Link>
+                <Link
+                  to="question-answer"
+                  smooth={true}
+                  duration={500}
+                >
+                  Часто задаваемые вопросы
+                </Link>
               </div>
             </div>
             <div className={styles['group']}>

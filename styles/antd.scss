@@ -107,3 +107,14 @@
     }
   }
 }
+
+.antd-tooltip {
+  max-width: 290px;
+  --antd-arrow-background-color: 0;
+
+  .ant-tooltip-inner {
+    background: #FFFFFF;
+    border-radius: 0;
+    padding: 20px;
+  }
+}

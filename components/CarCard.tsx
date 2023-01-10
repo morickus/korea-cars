@@ -50,6 +50,7 @@ const CarCard: FC<ICarCard> = (props) => {
             </div>
           ))}
         </Carousel>
+        <i className={`icon-play ${styles.button}`} />
       </div>
       <div className={styles.body}>
         <span className={styles.title}>{model}</span>

@@ -1,0 +1,27 @@
+.root {
+  .header {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      color: var(--blue-color);
+      margin-right: 8px;
+      font-size: 15px;
+    }
+
+    .title {
+      color: var(--blue-color);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  .text {
+    color: var(--black-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 163.5%;
+    margin-top: 8px;
+  }
+}
