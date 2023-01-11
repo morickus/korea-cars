@@ -719,9 +719,10 @@
         font-size: 30px;
         border-radius: 50%;
         color: var(--blue-color);
+        border: 1px solid rgba(17, 70, 143, 0);
 
         &-minus {
-          outline: 1px solid rgba(17, 70, 143, .1);
+          border: 1px solid rgba(17, 70, 143, .1);
         }
 
         &-plus {
